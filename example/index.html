@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>demo</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+  <script src="../index.js"></script>
+  <style>
+    html, body {
+      height: 100%;
+    }
+    body {
+      margin: 0;
+    }
+    #slideDom {
+      height: 60%;
+      background: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div id="slideDom">
+  </div>
+  <p id="message"></p>
+  <script>
+    var msgEle = document.getElementById('message', {
+      distance: 80,
+      spacingTime: 1000,
+      preventDefault: true,
+      invalidBorderRange: 0.05      // 触控无效的区域比例
+    });
+    var msgIndex = 0;
+    function showMsg(msg) {
+      msgEle.innerHTML = msg;
+      window.clearTimeout(msgIndex);
+      msgIndex = window.setTimeout(function () {
+        msgEle.innerHTML = '';
+      }, 2000);
+    }
+
+    var slideEvent = new SlideEvent('slideDom');
+    slideEvent.onSlideLeft = function () {
+      showMsg('向左滑');
+    };
+    slideEvent.onSlideDown = function () {
+      showMsg('向下滑');
+    };
+    slideEvent.onSlideRight = function () {
+      showMsg('向右滑');
+    };
+    slideEvent.onSlideUp = function () {
+      showMsg('向上滑');
+    };
+    slideEvent.onMove = function (x, y) {
+      showMsg('滑动距离：<br/>x=>' + x + '; <br/>y=>' + y);
+    };
+  </script>
+</body>
+</html>
