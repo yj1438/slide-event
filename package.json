@@ -1,0 +1,24 @@
+{
+  "name": "slide-event",
+  "version": "0.1.0",
+  "description": "滑动手势事件，slide event",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yj1438/slide-event.git"
+  },
+  "keywords": [
+    "slide"
+  ],
+  "author": "yinjie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yj1438/slide-event/issues"
+  },
+  "homepage": "https://github.com/yj1438/slide-event#readme"
+}
