@@ -11,6 +11,16 @@
 npm i 
 ~~~
 
+## Demo
+
+### mac 
+
+```
+$ python -m SimpleHTTPServer 8080
+```
+
+在浏览器里打开 `http://localhost:8080/example/`
+
 ## Usage
 
 ~~~
@@ -36,7 +46,7 @@ new SlideEvent(domId:string, option:object);
 ### option
 
 * distance：默认80，px，最小滑动事件阀值；
-* spacingTime：默认1000，毫秒，滑动的有效时间，超时无效；
+* spacingTime：默认1000，毫秒，滑动的有效时间，超时无效；
 * preventDefault：默认 false，阻止事件冒泡；
 * invalidBorderRange：默认 0.05，滑动无效的边框范围比例，为了防止移动端从边框滑动时会拉起手机自带的菜单。
 
