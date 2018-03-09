@@ -8,7 +8,7 @@
 ## Installation
 
 ~~~
-npm i 
+$ npm i git+https://github.com/yj1438/slide-event.git --save
 ~~~
 
 ## Demo
